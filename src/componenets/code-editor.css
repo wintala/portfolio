@@ -1,0 +1,54 @@
+:root {
+	--toolbar-color: rgb(54, 54, 54);
+	--toolbar-font-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.editor-wrap {
+	background-color: rgb(27, 27, 27);
+	width: 100%;
+}
+
+.editor-toolbar {
+	background-color: var(--toolbar-color);
+	height: 40px;
+	width: 100%;
+}
+
+.editor-toolbar div{
+	color: white;
+	background-color: rgb(77, 77, 77);
+	margin-left: 70px;
+	height: 100%;
+	width: 100px;
+	line-height: 40px;
+	text-align: right;
+	padding: 0 5px;
+	white-space: pre;
+	font-size: 13px;
+}
+
+.editor-pathbar {
+	background-color: rgb(0, 0, 0);
+	height: 20px;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 12px;
+	line-height: 20px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+
+.line {
+	display:  grid;
+	grid-template-columns: 70px auto;
+	grid-template-rows: auto;
+	color: white;
+}
+
+.line div:nth-child(1) {
+	background-color: var(--toolbar-color);
+	text-align: center;
+	color: var(--toolbar-font-color);
+}

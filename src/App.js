@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Skillmenu from "./componenets/skiill-menu"
+import "./App.css"
 
-function App() {
+import { BrowserRouter as Router,
+Switch, Route, Link
+} from "react-router-dom"
+import Programming from "./componenets/programming-skills"
+import Analytics from "./componenets/data-analytiikka";
+
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="nav">
+        <Link to="/tiedot">TIEDOT</Link>
+        <Link to="/taidot">TAIDOT</Link>
+        <Link to="/portfolio">PORTFOLIO</Link>
+      </div>
+      <Switch>
+        <Route path="/taidot/ohjelmointi">
+          <Programming />
+        </Route>
+        <Route path="/taidot/dataanalytiikka">
+          <Analytics />
+        </Route>
+        <Route path="/taidot">
+          <Skillmenu />
+        </Route>
+        <Route path="/portfolio">
+          <div>töitä täällä</div>
+        </Route>
+        <Route path="/tiedot">
+          <div>tiedot täällä</div>
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
+

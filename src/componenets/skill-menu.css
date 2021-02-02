@@ -1,0 +1,67 @@
+
+.skill-menu-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	background: linear-gradient(#EDE8DF, white)
+}
+
+
+.skill-menu-item {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	width: 400px;
+	height: 300px;
+	margin: 20px;
+	overflow: hidden;
+	background-color: white;
+	cursor: pointer;
+}
+
+.skill-menu-item h1{
+	text-align: center;
+}
+
+.image-wrap {
+	position: relative;
+}
+
+.image-wrap img{
+	position: absolute;
+}
+
+.bubble {
+	right: 10px;
+	width: 130px;
+	animation: 3s rot linear infinite;
+}
+
+.barbell {
+	width: 150px;
+	animation: 3s updown linear infinite;
+}
+
+.puzzle {
+	width: 150px;
+	top: 100px;
+	left: 140px;
+	animation: 3s spin linear alternate infinite;
+}
+
+@keyframes rot {
+	0% {transform: rotate(-20deg)}
+	50% {transform: rotate(20deg)}
+	100% {transform: rotate(-20deg)}
+}
+
+@keyframes updown {
+	0% {top: 90px;}
+	50% {top: -30px;}
+	100% {top: 90px;}
+}
+
+@keyframes spin {
+	0% {transform:rotate(0); top: 50px; left: 100px}
+	100% {transform:rotate(360deg); top: 100px; left: 140px} 
+}

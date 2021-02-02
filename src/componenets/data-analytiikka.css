@@ -1,0 +1,10 @@
+.analysis-anim-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.analysis-anim-wrap > div {
+	width: 500px;
+}

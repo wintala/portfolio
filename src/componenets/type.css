@@ -1,0 +1,11 @@
+
+.type-text {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: consolas;
+	width: 24ch;
+	animation-fill-mode: forwards;
+}
+
+
