@@ -14,13 +14,14 @@ const Skillmenu = () => {
 	const history = useHistory()
 
   useEffect(() => {
+		let isMounted = true;
     const createRandomArray = (len, slope, constant, randomness) => (
       new Array(len).fill(0).map((n, i)=> Math.floor(Math.random() * randomness) + constant + slope * i)
 		)
 		const randomSeries = () => ({random7: createRandomArray(7, 10, 0, 20), anotherRandom7: createRandomArray(7, -10, 60, 20)})
     setData(randomSeries())
-    setInterval(() => {setData(randomSeries())}, 1000)
-
+    setInterval(() => isMounted ? setData(randomSeries()) : null, 1000)
+		return () => { isMounted = false }
   }, [])
 
   if (!data) {
@@ -29,7 +30,10 @@ const Skillmenu = () => {
 
 	return(
 		<>
-		<Banner mainTitle={"taidot"} secondaryTitle={"valitse kategoria"}/>
+		<Banner 
+			mainTitle={"taidot"} secondaryTitle={"valitse kategoria"} 
+			leftArrow={{text: "PROFIILI", path: "./"}} rightArrow={{text: "PORTFOLIO", path: "./portfolio"}}
+		/>
 		<div className="skill-menu-wrap">
 			<div className="skill-menu-item" onClick={() => history.push("./taidot/dataanalytiikka")}>
 				<h1>Data-analytiikka</h1>
@@ -47,7 +51,7 @@ const Skillmenu = () => {
 					timePerChar={200}
 				/>
 			</div>
-			<div className="skill-menu-item">
+			<div className="skill-menu-item" onClick={() => history.push("./taidot/muut")}>
 				<h1>Muut taidot</h1>
 				<div className="image-wrap">
 					<img className="puzzle" src={pala} alt="paloja"></img>

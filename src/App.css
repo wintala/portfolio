@@ -5,8 +5,8 @@
 
 
 .nav{
+	position: relative;
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
 	text-align: center;
 	justify-content: center;
@@ -34,4 +34,24 @@
 .nav a:hover {
 	padding-top: 3px;
 	border-bottom: 3px solid var(--navbar-color);
+}
+
+.nav div {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+	.nav a:nth-child(4){
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.nav div {
+		display: none;
+	}
+
 }

@@ -7,17 +7,20 @@ const [length, setLength] = useState(0)
 const [cursor, setCursor] = useState(false)
 
 useEffect(() => {
+	let isMounted = true
+	const getIsMounted = () => isMounted
 	const lengthOfString = words.map(w => w.word).join("").length
 	const timePerChar = time / lengthOfString
 	for (let i = 0; i <= lengthOfString; i++) {
-		setTimeout(() => setLength(i + 1), i * timePerChar + delay)
+		setTimeout(() => getIsMounted() ? setLength(i + 1) : null, i * timePerChar + delay)
 		if (i % 8 === 0) {
-			setTimeout(() => setCursor(false), i * timePerChar + delay)
+			setTimeout(() => getIsMounted() ? setCursor(false) : null, i * timePerChar + delay)
 		} else if (i % 4 === 0) {
-			setTimeout(() => setCursor(true), i * timePerChar + delay)
+			setTimeout(() => getIsMounted() ? setCursor(true) : null, i * timePerChar + delay)
 		}
 	}
-	setTimeout(() => setCursor(false), time + delay)
+	setTimeout(() => isMounted ? setCursor(false) : null, time + delay)
+	return () => {isMounted = false}
 }, [])
 
 	return(

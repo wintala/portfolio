@@ -3,8 +3,50 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap
 }
 
 .analysis-anim-wrap > div {
-	width: 500px;
+	width: 600px;
+}
+
+.analysis-skills-container {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.analysis-skills-container > div{
+	width: 300px;
+	padding-top: 20px;
+	background-color: #D9D9D9;
+	height: 250px;
+	font-size: 16px;
+}
+
+.analysis-skills-container > div:nth-child(odd){
+	background-color: #EDE8DF;
+}
+
+.analysis-skills-container > div img{
+	display: block;
+	padding-left: 40px;
+	height: 80px;
+}
+
+.analysis-skills-container > div ul li{
+	margin: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+	.analysis-anim-wrap > div {
+		width: 95%;
+	}
+
+	.analysis-skills-container > div{
+		width: 100%;
+	}
+
 }

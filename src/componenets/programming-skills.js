@@ -3,7 +3,6 @@ import Editor from "./code-editor";
 import Banner from "./banner";
 
 
-
 const Programming = () => {
 	return(
 		<>

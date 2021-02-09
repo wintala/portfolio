@@ -26,7 +26,7 @@ const transWhite = "rgb(255, 255, 255, 0.5)"
  const editorDataWithComments = [[{word: ``, color: transWhite}],
                                   [{word: `// By no means am I an expert in all the techonologies below`, color: transWhite}],
                                   [{word: `// but I have some level of experience in all of these`, color: transWhite}],
-                                  [{word: `// and I don't have to start from the "hello world" tuorials when working with them`, color: transWhite}],
+                                  [{word: `// and I certainly don't have to start from the "hello world" tutorials when working with them`, color: transWhite}],
                                   [{word: ``, color: transWhite}]
                                 ].concat(editordataFinnish)
 
