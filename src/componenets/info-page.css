@@ -7,6 +7,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	position: relative;
+	cursor: url("../images/lasis.png"), auto;
 }
 
 .info-wrap h5{
@@ -45,13 +46,13 @@
 	padding-top: 20px;
 	font-size: 15px;
 	line-height: 18px;
-	animation: move1 1.5s linear;
+	animation: move1 1s linear;
 }
 .info-wrap > div:nth-child(2) {
-	animation: move2 1.5s linear;
+	animation: move2 1s linear;
 }
 .info-wrap > div:nth-child(3) {
-	animation: move3 1.5s linear;
+	animation: move3 1s linear;
 }
 
 

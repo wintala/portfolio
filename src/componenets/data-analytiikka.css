@@ -11,15 +11,18 @@
 }
 
 .analysis-skills-container {
+	width: 1200px;
+	margin: 0 auto;
 	margin-top: 10px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+	cursor: url("../images/lasis.png"), auto;
 }
 
 .analysis-skills-container > div{
-	width: 300px;
+	width: calc(1200px / 5);
 	padding-top: 20px;
 	background-color: #D9D9D9;
 	height: 250px;
@@ -40,13 +43,41 @@
 	margin: 10px;
 }
 
+@media only screen and (max-width: 1200px) {
+	.analysis-skills-container { 
+		width: 600px;
+	}
+
+	.analysis-skills-container > div {
+		width: 300px;
+	}
+
+	.analysis-skills-container > div:nth-child(3) {
+		background-color: #D9D9D9;
+	}
+
+	.analysis-skills-container > div:nth-child(4) {
+		background-color: #EDE8DF;
+	}
+}
+
 @media only screen and (max-width: 650px) {
 	.analysis-anim-wrap > div {
-		width: 95%;
+		width: 100%;
 	}
 
 	.analysis-skills-container > div{
 		width: 100%;
 	}
 
+	.analysis-skills-container > div:nth-child(odd){
+		background-color: #EDE8DF;
+	}
+
+	.analysis-skills-container > div:nth-child(even){
+		background-color: #D9D9D9;
+	}
+
 }
+
+

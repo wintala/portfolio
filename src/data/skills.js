@@ -3,6 +3,7 @@ const skills = {
 	languages: ["python", "JS&TS", "Java"],
 	frontEnd: ["React + Redux", "Bootstarp", "Sass", "Webpack"],
 	backEnd: ["Django + DRF", "Node + Express", "Flask", "Spring"],
+  mobileApps: ["React Native"],
 	dataBases: ["SQL", "Mongo"],
 	other: ["Git", "Docker", "ChromeDevTools", "AWS (Lambda, EC2, RDS, S3)"]
 } 

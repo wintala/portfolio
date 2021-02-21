@@ -3,7 +3,7 @@
 	display: inline-block;
 	overflow: hidden;
 	white-space: nowrap;
-	font-family: consolas;
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 	width: 24ch;
 	animation-fill-mode: forwards;
 }

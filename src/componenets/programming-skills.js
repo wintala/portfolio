@@ -9,7 +9,7 @@ const Programming = () => {
 		<Banner secondaryTitle={"Ohjelmointi"} />
 		<Editor 
 			lines={skills.commentedSkills}
-			timePerChar={30}
+			timePerChar={25}
 		/>
 		</>
 	)

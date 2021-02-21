@@ -7,6 +7,7 @@
 .editor-wrap {
 	background-color: rgb(27, 27, 27);
 	width: 100%;
+	cursor: text;
 }
 
 .editor-toolbar {
@@ -51,4 +52,11 @@
 	background-color: var(--toolbar-color);
 	text-align: center;
 	color: var(--toolbar-font-color);
+}
+
+
+@media only screen and (max-width: 600px) { 
+	.editor-wrap {
+		overflow-x: scroll;
+	}
 }

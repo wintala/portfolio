@@ -13,3 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+
+.chartjs-render-monitor {
+  cursor: crosshair;
+}

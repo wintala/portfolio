@@ -1,0 +1,51 @@
+.square-wrap {
+	z-index: 2;
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+	overflow:hidden;
+	background-color: transparent;
+	position: fixed;
+	top: 40px;
+	left: 0;
+	right: 0;
+	animation: hideback 2s linear;
+}
+
+@keyframes hideback{
+	0%{background-color: white;}
+	100%{background-color: white;}
+}
+
+.square-wrap div {
+	position: relative;
+	text-align: center;
+	line-height: calc(100vw / 13);
+	font-size: 40px;
+	font-weight: bold;
+	color: #5C413F;
+	animation: spinleft 2s ease-out;
+}
+.square-wrap div:nth-child(odd) {
+	background-color: var(--beige);
+}
+
+.square-wrap div:nth-child(even) {
+	background-color: var(--grey);
+	animation: spinright 2s ease-out;
+}
+
+@keyframes spinleft {
+	0%{transform: rotate(-90deg); left: 1500px}
+	100%{transform: rotate(0deg); left: 0px}
+}
+
+@keyframes spinright {
+	0%{transform: rotate(90deg); left: -1500px}
+	100%{transform: rotate(0deg); left: 0px}
+}
+
+@media only screen and (max-width: 600px) {
+	.square-wrap{
+		display: none;
+	}
+}

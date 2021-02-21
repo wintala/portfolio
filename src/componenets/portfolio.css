@@ -4,17 +4,16 @@
 }
 
 .portfolio-list {
-	width: 90vw;
+	width: 100%;
 	margin: 1% auto;
 	border-collapse: collapse;
 }
 
 .portfolio-info {
 	text-align: center;
-	width: 90vw;
+	width: 98%;
 	margin: auto;
 	margin-top: 40px;
-	color: rgb(207, 121, 106);
 	font-weight: bold;
 }
 
@@ -35,13 +34,13 @@
 }
 
 .portfolio-list tr:nth-child(odd) {
-	animation: move-right 1.5s linear;
+	animation: move-right 1s linear;
 	background-color: var(--grey);
 }
 
 .portfolio-list tr:nth-child(even) {
 	background-color: var(--beige);
-	animation: move-left 1.5s linear;
+	animation: move-left 1s linear;
 }
 
 @keyframes move-left {
@@ -55,7 +54,8 @@
 }
 
 .portfolio-list tr:nth-child(1) {
-	background-color: rgb(151, 151, 197);
+	background-color: #5C413F;
+	color: var(--beige);
 }
 
 .portfolio-list td, .portfolio-list th{

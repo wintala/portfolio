@@ -3,23 +3,23 @@ import Banner from "./banner"
 import "./contact-info.css"
 
 const Contact = () => {
-	const [num, setNum] = useState("0")
+	const [num, setNum] = useState("")
 	const [press, setPress] = useState(true)
 
 	useEffect(() => {
 		let isMounted = true;
 
 		const appendNum = (numb) => {
-			const myNum = [0, 4, 4, 3, 0, 4, 8, 3, 3, 1]
-			if (numb.length < 10) {
+			const myNum = [0, 4, 4, 3, 0, 4, 8, 3, 3, 1, " ", " ", " "] // spacet hack jotta numero näkyy pidempään kokonaisena
+			if (numb.length < myNum.length) {
 				return numb + myNum[numb.length].toString()
 			} else {
 				return("")
 			}
 		}
 
-		setInterval(() => isMounted ? setNum(n => appendNum(n)): null, 1000)
-		setInterval(() => isMounted ? setPress(p => !p): null, 500)
+		setInterval(() => isMounted ? setNum(n => appendNum(n)): null, 500)
+		setInterval(() => isMounted ? setPress(p => !p): null, 250)
 		return () => { isMounted = false }
 	}, [])
 
@@ -53,7 +53,7 @@ const Contact = () => {
 						</div>
 						<div className="keyboard">
 							{Array(10).fill(0).map((e, i) => 
-							<div style={{backgroundColor: press && (num.slice(-1) === (i + 1).toString().slice(-1)) ? "rgb(230, 230, 230)": "white"}} 
+							<div style={{backgroundColor: press && (num.slice(-1) === (i + 1).toString().slice(-1)) ? "var(--grey)": "white"}} 
 								key={i}>
 								{i === 9 ? 0 : i + 1}
 								</div>

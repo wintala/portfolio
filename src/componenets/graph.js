@@ -43,7 +43,7 @@ const Graph = ({labels, dataSets}) => {
 
 
 	return(
-		<Line 
+		<Line
 			options={options}
 			data={data}
 		/>

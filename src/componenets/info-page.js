@@ -16,7 +16,7 @@ const Info = () => {
 					Etsin töitä joissa pääsen haastamaan itseäni ja hyödyntämään taitojani monipuolisesti.
 					Suurimmat vahvuuteni persoonana ovat ongelmanratkaisu- ja yhteistyökykyni sekä kärsivällisyys. 
 					Olen IT-matemaattisesti orientuitunut ja nautin analyyttisestä työstä, mutta
-					olen tarvittaessa valmis pöhisemään arvoketjuista, fasilitoinnista ja asiakaslähtöisyydestä
+					olen tarvittaessa valmis pöhisemään asiakaslähtöisyydestä, fasilitoinnista ja arvoketjuista 
 					sekä hymyilemään leveää asiakaspalveluhymyä.
 				</p>
 			</div>
