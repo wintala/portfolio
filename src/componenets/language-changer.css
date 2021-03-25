@@ -1,0 +1,16 @@
+
+.language-wrap div {
+	width: 44px;
+	height: 22px;
+	background-size: cover;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+#fi {
+	background-image: url("../images/fi.png") 
+}
+
+#en {
+	background-image: url("../images/en.png") 
+}

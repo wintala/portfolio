@@ -9,16 +9,15 @@ const SquaresDrop = () => {
 				.fill("")
 				.map(x => ["top", "bottom", "left", "right"][Math.floor(Math.random() * 4)])
 		)
-	console.log(direction.current.length)
 	useEffect(() => {
 		setTimeout(() => {
-			const inter = setInterval(() => {setCurrent(c => c + 1)}, 2);
-			setTimeout(() => clearInterval(inter), 4000)
-		}, 3000)
-		setTimeout(() => setNullDisplay(true), 7000)
+			const inter = setInterval(() => {console.log("jii") || setCurrent(c => c + 1)}, 1000 / 60);
+			setTimeout(() => clearInterval(inter), 5000)
+		}, 4000)
+		setTimeout(() => setNullDisplay(true), 9000)
 	}, [])
 
-	const currentTransition = Math.ceil(current**1.5 / 6)
+	const currentTransition = Math.ceil(current**1.5 / 2)
 
 	const dirToDiv = (dir, key) => {
 		const greeting1 = "TERVETULOA!"

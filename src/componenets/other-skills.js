@@ -1,8 +1,25 @@
 import Banner from "./banner"
 import "./other-skills.css"
 import pala from "../images/pala-vihreä.png";
+import {useContext} from "react"
+import {LanguageContext} from "../App"
+import skills from "../data/other-skills";
 
 const OtherSkills = () => {
+	const lan = useContext(LanguageContext)
+
+	const langContent = {
+		EN: {
+			secondaryTitle: "Other skills",
+			endNote: "Note: You won't find skills directly related to my studies here. I assume that these come up more clearly in my transcript of records",
+			contentHeader: "Skills"
+		},
+		FI: {
+			secondaryTitle: "Muut taidot",
+			endNote: "Huom: Et löydä suoraan opiskelemiini aineesin liittyviä taitoja täältä, vaan oletan näiden tulevan paremmin ilmi opintorekisteristäni",
+			contentHeader: "Taidot"
+		}
+	}
 
 	const puzzleWrap = () => {
 		const r = () => Math.floor(Math.random() * 360)
@@ -17,8 +34,8 @@ const OtherSkills = () => {
 	}
 
 	return(
-		<>
-		<Banner secondaryTitle={"muut taidot"}/>
+		<div className="page-wrap">
+		<Banner secondaryTitle={langContent[lan].secondaryTitle}/>
 		<div className="other-skills-wrap">
 		<div>
 			{puzzleWrap()}
@@ -29,41 +46,20 @@ const OtherSkills = () => {
 			{puzzleWrap()}
 		</div>
 			<div>
-				<h3>Taidot</h3>
+				<h3>{langContent[lan].contentHeader}</h3>
 					<ul>
-						<li>
-							<h4>
-								Kielet
-							</h4>
-							<ul>
-								<li>Suomi: Äidinkieli</li>
-								<li>Englanti: Sujuva viestintä</li>
-								<li>Ruotsi: Kohtalainen</li>
-								<li>Espanja: Alkeet</li>
-							</ul>
-						</li>
-						<li>
-							<h4>
-								IT
-							</h4>
-							<ul>
-								<li>MS Office: Word, Power Point</li>
-								<li>SAP</li>
-							</ul>
-						</li>
-						<li>
-							<h4>
-								Kaupalliset
-							</h4>
-							<ul>
-								<li>Kirjanpito ja tilinpäätös</li>
-								<li>Digimarkkinointi</li>
-							</ul>
-						</li>
+					{skills[lan].map(s =>
+					<li>
+						<h4>{s.category}</h4>
+						<ul>
+						{s.bullets.map(b =>
+							<li>{b}</li>
+						)}
+						</ul>
+					</li>
+					)}
 					</ul>
-					<div>
-						Huom: Et löydä suoraan opiskelemiini aineesin liittyviä taitoja täältä, vaan oletan näiden tulevan paremmin ilmi opintorekisteristäni
-					</div>
+					<div>{langContent[lan].endNote}</div>
 			</div>
 			<div>
 				{puzzleWrap()}
@@ -74,7 +70,7 @@ const OtherSkills = () => {
 				{puzzleWrap()}
 			</div>
 		</div>
-		</>
+		</div>
 	)
 
 }

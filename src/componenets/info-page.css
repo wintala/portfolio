@@ -47,6 +47,7 @@
 	font-size: 15px;
 	line-height: 18px;
 	animation: move1 1s linear;
+	position: relative;
 }
 .info-wrap > div:nth-child(2) {
 	animation: move2 1s linear;
@@ -69,6 +70,7 @@
 	100%{position: absolute; width: 33.3%; top: 0px; left: 66.6%;}
 }
 
+
 @media only screen and (max-width: 1000px) {
 	.info-wrap {
 		grid-template-columns: 1fr
@@ -78,3 +80,4 @@
 		animation: none;
 	}
 }
+

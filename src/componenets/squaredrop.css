@@ -8,7 +8,7 @@
 	top: 40px;
 	left: 0;
 	right: 0;
-	animation: hideback 2s linear;
+	animation: hideback 4s linear;
 }
 
 @keyframes hideback{
@@ -23,7 +23,7 @@
 	font-size: 40px;
 	font-weight: bold;
 	color: #5C413F;
-	animation: spinleft 2s ease-out;
+	animation: spinleft 3s ease-out;
 }
 .square-wrap div:nth-child(odd) {
 	background-color: var(--beige);
@@ -31,7 +31,7 @@
 
 .square-wrap div:nth-child(even) {
 	background-color: var(--grey);
-	animation: spinright 2s ease-out;
+	animation: spinright 3s ease-out;
 }
 
 @keyframes spinleft {

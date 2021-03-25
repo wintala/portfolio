@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import Banner from "./banner"
 import "./contact-info.css"
+import {useContext} from "react"
+import {LanguageContext} from "../App"
 
 const Contact = () => {
 	const [num, setNum] = useState("")
 	const [press, setPress] = useState(true)
+	const lan = useContext(LanguageContext)
 
 	useEffect(() => {
 		let isMounted = true;
@@ -33,16 +36,35 @@ const Contact = () => {
 		}
 	}
 
+	const langContent = {
+		EN: {
+			mainTitle: "Contact info",
+			arrowLeft: "PORTFOLIO",
+			email: "Email",
+			phone: "Phone",
+			address: "Address",
+			postCode: "Postcode"
+		},
+		FI: {
+			mainTitle: "Yhteystiedot",
+			arrowLeft: "PORTFOLIO",
+			email: "Sähköposti",
+			phone: "Puhelin",
+			address: "Osoite",
+			postCode: "Postinumero"
+		}
+	}
+
 	return(
-		<>
-		<Banner mainTitle={"Yhteystiedot"} leftArrow={{text:"PORTFOLIO", path: "./portfolio"}}/>
+		<div className="page-wrap">
+		<Banner mainTitle={langContent[lan].mainTitle} leftArrow={{text:langContent[lan].arrowLeft, path: "./portfolio"}}/>
 		<div className="conatct-wrap">
 			<div>
 				<ul >
-					<li>Sähköposti: rintala.waltteri@gmail.com</li>
-					<li>Puhelin: +358 44 304 8331</li>
-					<li>Osoite: Kristiinankatu 10B 39, Turku</li>
-					<li>Postinumero: 20100</li>
+					<li>{langContent[lan].email}: rintala.waltteri@gmail.com</li>
+					<li>{langContent[lan].phone}: +358 44 304 8331</li>
+					<li>{langContent[lan].address}: Kristiinankatu 10B 39, Turku</li>
+					<li>{langContent[lan].postCode}: 20100</li>
 				</ul>
 			</div>
 			<div>
@@ -63,7 +85,7 @@ const Contact = () => {
 				</div>
 			</div>
 		</div>
-		</>
+		</div>
 	)
 }
 

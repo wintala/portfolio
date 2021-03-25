@@ -2,91 +2,75 @@ import Banner from "./banner"
 import mina from "../images/mina.png"
 import "./info-page.css"
 
+import education from "../data/education"
+import workExperience from "../data/work-experience"
+import profileText from "../data/profile-text"
+
+import {useContext} from "react"
+import {LanguageContext} from "../App"
 
 const Info = () => {
+	const lan = useContext(LanguageContext)
+
+	const langContent = {
+		EN: {
+			mainTitle: "Info",
+			secondaryTitle: "Waltteri Rintala",
+			arrowRight: "SKILLS",
+			educationHeader: "Education",
+			experienceHeader: "Experience"
+		},
+		FI: {
+			mainTitle: "Info",
+			secondaryTitle: "Waltteri Rintala",
+			arrowRight: "TAIDOT",
+			educationHeader: "Koulutus",
+			experienceHeader: "Kokemus"
+		}
+	}
 
 	return(
-		<>
-		<Banner mainTitle={"info"} secondaryTitle={"waltteri rintala"} rightArrow={{text: "TAIDOT", path: "./taidot"}}/>
+		<div className="page-wrap">
+		<Banner mainTitle={langContent[lan].mainTitle} secondaryTitle={langContent[lan].secondaryTitle} rightArrow={{text: langContent[lan].arrowRight, path: "./taidot"}}/>
 		<div className="info-wrap">
 			<div>
 				<img src={mina} alt="minä"></img>
-				<p>
-					Olen 22v parhaillaan kandia kirjoittava opiskelija Turun kauppakorkeakoulussa. 
-					Etsin töitä joissa pääsen haastamaan itseäni ja hyödyntämään taitojani monipuolisesti.
-					Suurimmat vahvuuteni persoonana ovat ongelmanratkaisu- ja yhteistyökykyni sekä kärsivällisyys. 
-					Olen IT-matemaattisesti orientuitunut ja nautin analyyttisestä työstä, mutta
-					olen tarvittaessa valmis pöhisemään asiakaslähtöisyydestä, fasilitoinnista ja arvoketjuista 
-					sekä hymyilemään leveää asiakaspalveluhymyä.
-				</p>
+				<p>{profileText[lan]}</p>
 			</div>
 			<div>
-				<h3>Koulutus</h3>
+				<h3>{langContent[lan].educationHeader}</h3>
 				<ul>
+					{education[lan].map(e =>
 					<li>
-						<h4>
-							Turun kauppakorkeakoulu
-						</h4>
-						<h5>Kauppatieteiden maisteri (2018-2023)</h5>
+						<h4>{e.school}</h4>
+						<h5>{e.degree}</h5>
 						<ul>
-							<li>Pääaine: taloustiede</li>
-							<li>Sivuaineet: matematiikka, tilastotiede, rahoitus</li>
+						{e.bullets.map(b =>
+							<li>{b}</li>
+						)}
 						</ul>
 					</li>
-					<li>
-						<h4>
-							Kerttulin lukio
-						</h4>
-						<h5>
-							Ylioppilas (2014-2017))
-						</h5>
-						<ul>
-							<li>Matematiikka, Fysiikka, Yhteiskuntaoppi = L</li>
-							<li> Englanti, Äidinkieli = E</li>
-						</ul>
-					</li>
+					)}
 				</ul>
 			</div>
 			<div>
-				<h3>Kokemus</h3>
+				<h3>{langContent[lan].experienceHeader}</h3>
 				<ul>
+				{workExperience[lan].map(e =>
 					<li>
-						<h4>
-							DHL
-						</h4>
-						<h5>Terminaalityöntekijä (06/2019 - 12/2019)</h5>
+						<h4>{e.comnpany}</h4>
+						<h5>{e.position}</h5>
 						<ul>
-							<li>Rahtikirjojen ja asiakastietojen täyttö</li>
-							<li>Lähetysten lajittelu</li>
+						{e.bullets.map(b =>
+							<li>{b}</li>
+						)}
 						</ul>
 					</li>
-					<li>
-						<h4>
-							Asepalvelus suoritettu
-						</h4>
-						<h5>
-							Lääkintämies/Liikunta-alan varusmies (2018)
-						</h5>
-						<ul>
-							<li>Kuntotestien ja liikunta-tuntien vetäminen</li>
-							<li>Liikuntahallin asiakkaiden neuvonta</li>
-						</ul>
-					</li>
-					<li>
-						<h4>
-							Raision urheilijat
-						</h4>
-						<h5>
-							Uinnin juniorivalmentaja (koulun ohella 2015-2017)
-						</h5>
-						<ul>
-							<li>Treenien suunnittelu ja toteutus</li>
-						</ul>
-					</li>
+				)}
 				</ul>
 			</div>
 		</div>
-		</>
+		</div>
 	)
 }
 

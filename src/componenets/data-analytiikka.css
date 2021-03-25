@@ -80,4 +80,11 @@
 
 }
 
+@media only screen and (min-width: 1800px) { 
+	.analysispage-content {
+		margin-top: 100px;
+		transform: scale(1.3);
+	}
+}
+
 

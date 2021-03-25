@@ -1,15 +1,27 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import Excel from "./excel";
 import Graph from "./graph";
 import "./data-analytiikka.css"
 import skills from "../data/data-analysis-skills"
 import Banner from "./banner";
 import utils from "../utils";
-
+import {LanguageContext} from "../App"
 
 
 const Analytics = () => {
 	const [data, setData] = useState(null)
+	const lan = useContext(LanguageContext)
+
+	const langSkills = skills[lan]
+
+	const langContent = {
+		EN: {
+			secondaryTitle: "Data science",
+		},
+		FI: {
+			secondaryTitle: "Data-analytiikka",
+		}
+	}
 
   useEffect(() => {
 		let isMounted = true
@@ -48,35 +60,37 @@ const Analytics = () => {
 	
 	return(
 		<>
-		<Banner secondaryTitle={"Data-analytiikka"} />
-		<div className="analysis-anim-wrap">
-			<div>
-				<Graph 
-				labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
-				dataSets={[
-					{title: "Set1", data: data.random7, color: "rgb(255, 102, 153)"},
-					{title: "Set2", data: data.anotherRandom7, color: "rgb(102, 153, 255)"}
-				]}/>
-			</div>
-			<div>
-				<Excel
-				matrix={[excelEmptyRow, random7frorExcel, anotherRandom7frorExcel, sumSeriesForExcel, excelEmptyRow, covarianceRow, correlationRow, excelEmptyRow]}
-				title={"Book1"}
-				/>
-			</div>
-		</div>
-		<div className="analysis-skills-container">
-				{Object.keys(skills).map(key => 
-				<div key={key}>
-					<img src={skills[key].image} alt="logo"></img>
-					<ul>
-						{skills[key].skills.map(s => 
-						<li key={s}>{s}</li>
-						)}
-					</ul>
+		<Banner secondaryTitle={langContent[lan].secondaryTitle} />
+		<div className="analysispage-content">
+			<div className="analysis-anim-wrap">
+				<div>
+					<Graph 
+					labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
+					dataSets={[
+						{title: "Set1", data: data.random7, color: "rgb(255, 102, 153)"},
+						{title: "Set2", data: data.anotherRandom7, color: "rgb(102, 153, 255)"}
+					]}/>
 				</div>
-					
-				)}
+				<div>
+					<Excel
+					matrix={[excelEmptyRow, random7frorExcel, anotherRandom7frorExcel, sumSeriesForExcel, excelEmptyRow, covarianceRow, correlationRow, excelEmptyRow]}
+					title={"Book1"}
+					/>
+				</div>
+			</div>
+			<div className="analysis-skills-container">
+					{Object.keys(langSkills).map(key => 
+					<div key={key}>
+						<img src={langSkills[key].image} alt="logo"></img>
+						<ul>
+							{langSkills[key].skills.map(s => 
+							<li key={s}>{s}</li>
+							)}
+						</ul>
+					</div>
+						
+					)}
+			</div>
 		</div>
 		</>
 	)
