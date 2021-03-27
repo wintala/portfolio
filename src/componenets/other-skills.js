@@ -49,11 +49,11 @@ const OtherSkills = () => {
 				<h3>{langContent[lan].contentHeader}</h3>
 					<ul>
 					{skills[lan].map(s =>
-					<li>
+					<li key={s.category}>
 						<h4>{s.category}</h4>
 						<ul>
 						{s.bullets.map(b =>
-							<li>{b}</li>
+							<li key={b}>{b}</li>
 						)}
 						</ul>
 					</li>

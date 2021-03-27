@@ -9,7 +9,7 @@ const Banner = ({mainTitle, secondaryTitle, leftArrow, rightArrow}) => {
 			return null
 		}
 		return(
-			<div onClick={() => history.push(arr.path)} className={`${leftOrRight}-arrow-wrap`}>
+			<div onClick={() => history.push({pathname: arr.path, search: window.location.search})} className={`${leftOrRight}-arrow-wrap`}>
 				<div>
 					{arr.text}
 				</div>

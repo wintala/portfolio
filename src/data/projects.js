@@ -106,7 +106,7 @@ const projects = {
 			]
 		},
 		{
-			description: "Fraktaal trees",
+			description: "Fractal trees",
 			stack: "React",
 			links: [
 				{live: "https://fractaltreegenerator.netlify.app/"}, 

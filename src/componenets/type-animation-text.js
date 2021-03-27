@@ -21,7 +21,7 @@ useEffect(() => {
 	}
 	setTimeout(() => isMounted ? setCursor(false) : null, time + delay)
 	return () => {isMounted = false}
-}, [])
+}, [delay, time, words])
 
 	return(
 		<>

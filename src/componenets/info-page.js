@@ -41,12 +41,12 @@ const Info = () => {
 				<h3>{langContent[lan].educationHeader}</h3>
 				<ul>
 					{education[lan].map(e =>
-					<li>
+					<li key={e.school}>
 						<h4>{e.school}</h4>
 						<h5>{e.degree}</h5>
 						<ul>
 						{e.bullets.map(b =>
-							<li>{b}</li>
+							<li key={b}>{b}</li>
 						)}
 						</ul>
 					</li>
@@ -57,12 +57,12 @@ const Info = () => {
 				<h3>{langContent[lan].experienceHeader}</h3>
 				<ul>
 				{workExperience[lan].map(e =>
-					<li>
-						<h4>{e.comnpany}</h4>
+					<li key={e.company}>
+						<h4>{e.company}</h4>
 						<h5>{e.position}</h5>
 						<ul>
 						{e.bullets.map(b =>
-							<li>{b}</li>
+							<li key={b}>{b}</li>
 						)}
 						</ul>
 					</li>

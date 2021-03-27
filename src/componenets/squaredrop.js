@@ -11,10 +11,10 @@ const SquaresDrop = () => {
 		)
 	useEffect(() => {
 		setTimeout(() => {
-			const inter = setInterval(() => {console.log("jii") || setCurrent(c => c + 1)}, 1000 / 60);
+			const inter = setInterval(() => {setCurrent(c => c + 1)}, 1000 / 60);
 			setTimeout(() => clearInterval(inter), 5000)
-		}, 4000)
-		setTimeout(() => setNullDisplay(true), 9000)
+		}, 5000)
+		setTimeout(() => setNullDisplay(true), 10000)
 	}, [])
 
 	const currentTransition = Math.ceil(current**1.5 / 2)

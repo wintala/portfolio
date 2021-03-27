@@ -61,7 +61,9 @@ const Skillmenu = () => {
 			leftArrow={{text:langContent[lan].arrowLeft, path: "./"}} rightArrow={{text:langContent[lan].arrowRight, path: "./portfolio"}}
 		/>
 		<div className="skill-menu-wrap">
-			<div className="skill-menu-item" onClick={() => history.push("./taidot/dataanalytiikka")}>
+			<div className="skill-menu-item" 
+			onClick={() => history.push({pathname: "./taidot/dataanalytiikka", search: window.location.search})}
+			>
 				<h1>{langContent[lan].menuDataAnalysis}</h1>
 				<Graph 
 				labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
@@ -70,14 +72,18 @@ const Skillmenu = () => {
 					{title: "Set2", data: data.anotherRandom7, color: "rgb(102, 153, 255)"}
 					]}/>
 			</div>
-			<div className="skill-menu-item" onClick={() => history.push("./taidot/ohjelmointi")}>
+			<div className="skill-menu-item"
+			onClick={() => history.push({pathname: "./taidot/ohjelmointi", search: window.location.search})}
+			>
 			<h1>{langContent[lan].menuProgramming}</h1>
 				<Editor 
 					lines={skills.skillsWithoutComments.slice(0, 9)}
 					timePerChar={200}
 				/>
 			</div>
-			<div className="skill-menu-item" onClick={() => history.push("./taidot/muut")}>
+			<div className="skill-menu-item"
+			onClick={() => history.push({pathname: "./taidot/muut", search: window.location.search})}
+			>
 				<h1>{langContent[lan].menuOther}</h1>
 				<div className="image-wrap">
 					<img className="puzzle" src={pala} alt="paloja"></img>

@@ -30,7 +30,7 @@ const skills = {
 	},
 	EN: {
 		python: {
-			skills: ["Lots of experience", "Familiariness with the ecosystem and libraries", "Fast and productive scripting"],
+			skills: ["Lots of experience", "Familiarness with the ecosystem and libraries", "Fast and productive scripting"],
 			image: python
 		},
 		excel: {

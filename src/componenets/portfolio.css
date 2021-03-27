@@ -36,13 +36,13 @@
 }
 
 .portfolio-list tr:nth-child(odd) {
-	animation: move-right 1s linear;
+	animation: move-right 2s linear;
 	background-color: var(--grey);
 }
 
 .portfolio-list tr:nth-child(even) {
 	background-color: var(--beige);
-	animation: move-left 1s linear;
+	animation: move-left 2s linear;
 }
 
 @keyframes move-left {
