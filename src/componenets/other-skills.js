@@ -38,12 +38,14 @@ const OtherSkills = () => {
 		<Banner secondaryTitle={langContent[lan].secondaryTitle}/>
 		<div className="other-skills-wrap">
 		<div>
+			<div className="puzzle-wrap-wrap">
 			{puzzleWrap()}
 			{puzzleWrap()}
 			{puzzleWrap()}
 			{puzzleWrap()}
 			{puzzleWrap()}
 			{puzzleWrap()}
+			</div>
 		</div>
 			<div>
 				<h3>{langContent[lan].contentHeader}</h3>
@@ -62,12 +64,14 @@ const OtherSkills = () => {
 					<div>{langContent[lan].endNote}</div>
 			</div>
 			<div>
-				{puzzleWrap()}
-				{puzzleWrap()}
-				{puzzleWrap()}
-				{puzzleWrap()}
-				{puzzleWrap()}
-				{puzzleWrap()}
+				<div className="puzzle-wrap-wrap">
+					{puzzleWrap()}
+					{puzzleWrap()}
+					{puzzleWrap()}
+					{puzzleWrap()}
+					{puzzleWrap()}
+					{puzzleWrap()}
+				</div>
 			</div>
 		</div>
 		</div>

@@ -6,14 +6,14 @@
 .portfolio-list {
 	width: 100%;
 	margin: 1% auto;
+	margin-bottom: 0;
 	border-collapse: collapse;
 }
 
 .portfolio-info {
 	text-align: center;
 	width: 98%;
-	margin: auto;
-	margin-top: 40px;
+	margin: 40px auto;
 	font-weight: bold;
 }
 
@@ -64,6 +64,10 @@
 	text-align: left;
 	padding-left: 20px;
 	font-size: 18px;
+}
+
+.portfolio-list td {
+	min-height: calc((100vh - 520px) / 7);
 }
 
 .portfolio-list td{

@@ -63,19 +63,25 @@ const Analytics = () => {
 		<Banner secondaryTitle={langContent[lan].secondaryTitle} />
 		<div className="analysispage-content">
 			<div className="analysis-anim-wrap">
-				<div>
-					<Graph 
-					labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
-					dataSets={[
-						{title: "Set1", data: data.random7, color: "rgb(255, 102, 153)"},
-						{title: "Set2", data: data.anotherRandom7, color: "rgb(102, 153, 255)"}
-					]}/>
-				</div>
-				<div>
-					<Excel
-					matrix={[excelEmptyRow, random7frorExcel, anotherRandom7frorExcel, sumSeriesForExcel, excelEmptyRow, covarianceRow, correlationRow, excelEmptyRow]}
-					title={"Book1"}
-					/>
+				<div className="analysis-anim">
+					<div className="monitor-wrap">
+						<div className="monitor">
+							<Graph 
+							labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
+							dataSets={[
+								{title: "Set1", data: data.random7, color: "rgb(255, 102, 153)"},
+								{title: "Set2", data: data.anotherRandom7, color: "rgb(102, 153, 255)"}
+							]}/>
+						</div>
+					</div>
+					<div className="laptop-wrap">
+						<div className="laptop-monitor">
+							<Excel
+							matrix={[excelEmptyRow, random7frorExcel, anotherRandom7frorExcel, sumSeriesForExcel, excelEmptyRow, covarianceRow, correlationRow]}
+							title={"Book1"}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className="analysis-skills-container">

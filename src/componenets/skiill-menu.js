@@ -24,7 +24,7 @@ const Skillmenu = () => {
 		)
 		const randomSeries = () => ({random7: createRandomArray(7, 10, 0, 20), anotherRandom7: createRandomArray(7, -10, 60, 20)})
     setData(randomSeries())
-    setInterval(() => isMounted ? setData(randomSeries()) : null, 1000)
+    setInterval(() => isMounted ? setData(randomSeries()) : null, 1500)
 		return () => { isMounted = false }
   }, [])
 

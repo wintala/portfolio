@@ -5,6 +5,7 @@ import ReactGA from 'react-ga'
 import {Switch, Route, Link, useHistory} from "react-router-dom"
 import Programming from "./componenets/programming-skills"
 import Analytics from "./componenets/data-analytiikka";
+import Footer from "./componenets/footer"
 import Info from "./componenets/info-page";
 import OtherSkills from "./componenets/other-skills";
 import Portfolio from "./componenets/portfolio";
@@ -23,9 +24,10 @@ const App = () => {
   
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
-    const lang = urlParams.get("lang").toUpperCase()
-    if (lang === "EN" || lang === "FI") {
-      setLanguage(lang)
+    const lang = urlParams.get("lang")
+    const upperLang = lang ? lang.toUpperCase() : lang
+    if (upperLang === "EN" || upperLang === "FI") {
+      setLanguage(upperLang)
     }
     else {
       history.push({pathname: window.location.pathname, search: "lang=" + language})
@@ -95,6 +97,7 @@ const App = () => {
           <Info />
         </Route>
       </Switch>
+      <Footer />
     </LanguageContext.Provider>
   )
 }

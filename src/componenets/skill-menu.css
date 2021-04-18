@@ -4,8 +4,9 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	height: 500px;
-	background: linear-gradient(#EDE8DF, white)
+	background: linear-gradient(#EDE8DF, white);
+	padding: 100px 0; 
+	min-height: calc(100vh - 569px);
 }
 
 

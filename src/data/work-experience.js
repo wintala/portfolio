@@ -10,7 +10,7 @@ const workExperience = {
 			]
 		},
 		{
-			company: "Asepalvelus suoritettu",
+			company: "Asepalvelus",
 			position: "Lääkintämies/Liikunta-alan varusmies (2018)",
 			bullets: [
 				"Kuntotestien ja liikunta-tuntien vetäminen",
@@ -35,7 +35,7 @@ const workExperience = {
 			]
 		},
 		{
-			company: "Military service completed",
+			company: "Military service",
 			position: "Medic / Sports draftee (2018)",
 			bullets: [
 				"Arranging fitness tests and sport hours",

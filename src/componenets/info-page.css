@@ -8,6 +8,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	position: relative;
 	cursor: url("../images/lasis.png"), auto;
+	min-height: calc(100vh - 369px);
 }
 
 .info-wrap h5{

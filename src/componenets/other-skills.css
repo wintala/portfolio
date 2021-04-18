@@ -6,10 +6,10 @@
 .other-skills-wrap {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	min-height: calc(100vh - 263px);
 }
 
 .other-skills-wrap > div {
-	height: 600px;
 	background-color: white;
 	overflow: hidden;
 }
@@ -28,6 +28,14 @@
 	padding-top: 10px;
 }
 
+.puzzle-wrap-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 400px;
+}
+
 .other-skills-wrap h3{
 	text-transform: uppercase;
 }
@@ -35,12 +43,6 @@
 .other-skills-wrap h4{
 	margin-bottom: 10px;
 	text-transform: uppercase;
-}
-
-.puzzle-wrap {
-	position: relative;
-	width: 200px;
-	height: 200px;
 }
 
 .puzzle-wrap {
@@ -113,9 +115,15 @@
 @media only screen and (max-width: 1000px) {
 	.other-skills-wrap {
 		grid-template-columns: 1fr;
+		grid-template-rows: min-content 1fr min-content;
 	}
 
 	.other-skills-wrap > div:nth-child(odd) {
+		height: 190px;
+	}
+
+	.puzzle-wrap-wrap {
+		max-width: max-content;
 		height: 190px;
 	}
 }

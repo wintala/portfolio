@@ -6,7 +6,7 @@
 .conatct-wrap {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 76vh;
+	min-height: calc(100vh - 326px);
 }
 
 .conatct-wrap > div {

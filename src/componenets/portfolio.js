@@ -62,7 +62,7 @@ const Portfolio = () => {
 					</th>
 				</tr>
 				{projects[lan].map(p => 
-				<tr key={p.description}>
+				<tr key={p.description + lan}>
 					<td><p>{p.description}</p></td>
 					<td><p>{p.stack}</p></td>
 					<td>

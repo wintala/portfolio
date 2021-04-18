@@ -17,12 +17,17 @@ const Programming = () => {
 			secondaryTitle: "Ohjelmointi",
 		}
 	}
+	const empyLinesToKeepFooterInPlace = Math.ceil((window.innerHeight - 1045) / 19)
+
+	const emptyLines = empyLinesToKeepFooterInPlace > 0 ? new Array(empyLinesToKeepFooterInPlace).fill(0).map(x => [{word: "", color: "white"}]) : []
+
+
 
 	return(
 		<div className="page-wrap">
 		<Banner secondaryTitle={langContent[lan].secondaryTitle} />
 		<Editor 
-			lines={skills.commentedSkills}
+			lines={skills.commentedSkills.concat(emptyLines)}
 			timePerChar={25}
 		/>
 		</div>
