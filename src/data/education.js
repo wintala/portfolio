@@ -13,8 +13,11 @@ const education = {
 			school: "Kerttulin lukio",
 			degree: "Ylioppilas (2014-2017)",
 			bullets: [
-				"Matematiikka, Fysiikka, Yhteiskuntaoppi = L",
-				"Englanti, Äidinkieli = E"
+				"Matematiikka: L",
+				"Fysiikka: L",
+				"Yhteiskuntaoppi: L",
+				"Englanti: E",
+				"Äidinkieli: E"
 			]
 		}
 	],
@@ -31,8 +34,11 @@ const education = {
 			school: "Kerttuli high school",
 			degree: "Ylioppilas (2014-2017)",
 			bullets: [
-				"Mathematics, Physics, Social studies = L",
-				"English, Finnish = E"
+				"Mathematics: L",
+				"Physics: L",
+				"Social studies: L",
+				"English: E",
+				"Finnish: E"
 			]
 		}
 	]

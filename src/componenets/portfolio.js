@@ -13,7 +13,7 @@ const Portfolio = () => {
 		EN: {
 			mainTitle: "Porfolio",
 			secondaryTitle: "My projects",
-			arrowLeft: "SKILLS",
+			arrowLeft: "ABOUT ME",
 			arrowRight: "CONTACT INFO",
 			note: "Note: especially the backends are hosted on free tier on Heroku or App Engine and the server sleeps when there's no traffic so the first request may take couple of seconds",
 			tableWhat: "What",
@@ -23,7 +23,7 @@ const Portfolio = () => {
 		FI: {
 			mainTitle: "Porfolio",
 			secondaryTitle: "Omia projektejani",
-			arrowLeft: "TAIDOT",
+			arrowLeft: "MINUSTA",
 			arrowRight: "YHTEYSTIEDOT",
 			note: "Huom: etenkin backendit ovat enimmäkseen hostattu Herokussa tai App Enginessä ja free-tierillä palvelin nukkuu, kun siihen ei kohdistu liikennettä, joten ensimmäisen pyynnön käsittelemiseen voi mennä muutamia sekunteja",
 			tableWhat: "Mitä",
@@ -45,7 +45,7 @@ const Portfolio = () => {
 	return(
 		<div className="page-wrap">
 		<Banner mainTitle={langContent[lan].mainTitle} secondaryTitle={langContent[lan].secondaryTitle}
-			leftArrow={{text: langContent[lan].arrowLeft, path: "./taidot"}} rightArrow={{text: langContent[lan].arrowRight, path:"./yhteystiedot"}}
+			leftArrow={{text: langContent[lan].arrowLeft, path: "./minusta"}} rightArrow={{text: langContent[lan].arrowRight, path:"./yhteystiedot"}}
 		/>
 		<div className="portfolio-info">{langContent[lan].note}</div>
 		<table className="portfolio-list">

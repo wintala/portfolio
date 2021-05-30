@@ -1,5 +1,6 @@
 
 .banner {
+	z-index: 1000;
 	padding: 10px 0;
 	width: 100%;
 	background-color: #D9D9D9;

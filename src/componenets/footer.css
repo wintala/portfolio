@@ -1,5 +1,6 @@
 
 #footer {
+	z-index: 1000;
 	height: 150px;
 	position: relative;
 	display: flex;

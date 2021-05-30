@@ -1,0 +1,139 @@
+:root {
+  --color100: rgba(25, 28, 48, 0.5);
+  --transwhite: rgba(25, 28, 48, 0.2);
+}
+
+.presentation-backgroung {
+	background: linear-gradient(var(--color100), var(--transwhite) 50%, var(--color100)),
+							linear-gradient(45deg, var(--color100), var(--transwhite) 50%, var(--color100)),
+							linear-gradient(-45deg, var(--color100), var(--transwhite) 50%, var(--color100)),
+							linear-gradient(90deg, var(--color100), var(--transwhite) 50%, var(--color100));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-height: calc(100vh - 326px);
+}
+
+.projector-screen {
+	background-color: white;
+	width: 700px;
+	height: 500px;
+	margin: 50px;
+	margin-top: 90px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+}
+
+.presentation-backgroung .curtain-left {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -20%;
+	right: 90%;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	animation: left-curtain 4s linear;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.05)), linear-gradient(90deg, tomato,  rgb(170, 66, 47) 3%, tomato 6%, rgb(170, 66, 47) 8%, tomato 10%, rgb(170, 66, 47) 14%, tomato 18%, rgb(170, 66, 47) 22%, tomato 25%, rgb(170, 66, 47) 29%, tomato 33%, rgb(170, 66, 47) 37%, tomato 39%, rgb(170, 66, 47) 43%, tomato 45%, rgb(170, 66, 47) 49%, tomato 52%, rgb(170, 66, 47) 56%, tomato 58%, rgb(170, 66, 47) 60%, tomato 63%, rgb(170, 66, 47) 65%, tomato 67%, rgb(170, 66, 47) 70%, tomato 73%, rgb(170, 66, 47) 75%, tomato 78%, rgb(170, 66, 47) 
+	81%, tomato 83%, rgb(170, 66, 47) 85%, tomato 88%, rgb(170, 66, 47) 92%, tomato 94%, rgb(170, 66, 47) 96%, tomato 99%, rgb(170, 66, 47));
+}
+
+.presentation-backgroung .curtain-right {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -20%;
+	left: 90%;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	animation: right-curtain 4s linear;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.05)), linear-gradient(90deg, tomato,  rgb(170, 66, 47) 2%, tomato 4%, rgb(170, 66, 47) 7%, tomato 11%, rgb(170, 66, 47) 13%, tomato 15%, rgb(170, 66, 47) 19%, tomato 23%, rgb(170, 66, 47) 25%, tomato 27%, rgb(170, 66, 47) 29%, tomato 31%, rgb(170, 66, 47) 35%, tomato 37%, rgb(170, 66, 47) 40%, tomato 44%, rgb(170, 66, 47) 46%, tomato 50%, rgb(170, 66, 47) 53%, tomato 55%, rgb(170, 66, 47) 59%, tomato 61%, rgb(170, 66, 47) 63%, tomato 67%, rgb(170, 66, 47) 69%, tomato 73%, rgb(170, 66, 47) 76%, tomato 78%, rgb(170, 66, 47) 82%, tomato 85%, rgb(170, 66, 47) 89%, tomato 92%, rgb(170, 66, 47) 96%, tomato);
+}
+
+.presentation-backgroung .curtain-upper {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	bottom: calc(100% - 60px);
+	left: 0;
+	right: 0;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05)), linear-gradient(90deg, tomato,  rgb(170, 66, 47) 1.5%, tomato 3.0%, rgb(170, 66, 47) 4.5%, tomato 5.5%, rgb(170, 66, 47) 6.5%, tomato 8.0%, rgb(170, 66, 47) 9.0%, tomato 10.0%, rgb(170, 66, 47) 11.0%, tomato 12.0%, rgb(170, 66, 47) 13.0%, tomato 14.5%, rgb(170, 66, 47) 15.5%, tomato 17.0%, rgb(170, 66, 47) 18.5%, tomato 20.0%, rgb(170, 66, 47) 21.5%, tomato 23.0%, rgb(170, 66, 47) 24.0%, tomato 25.0%, rgb(170, 66, 47) 26.0%, tomato 27.5%, rgb(170, 66, 47) 28.5%, tomato 29.5%, rgb(170, 66, 47) 30.5%, tomato 31.5%, rgb(170, 66, 47) 33.0%, tomato 34.5%, rgb(170, 66, 47) 35.5%, tomato 37.0%, rgb(170, 66, 47) 38.0%, tomato 39.0%, rgb(170, 66, 47) 40.5%, tomato 42.0%, rgb(170, 66, 47) 43.5%, tomato 45.0%, rgb(170, 66, 47) 46.5%, tomato 48.0%, rgb(170, 66, 47) 49.5%, tomato 51.0%, rgb(170, 66, 47) 52.5%, tomato 53.5%, rgb(170, 66, 47) 54.5%, tomato 56.0%, rgb(170, 66, 47) 57.0%, tomato 58.5%, rgb(170, 66, 47) 59.5%, tomato 60.5%, rgb(170, 66, 47) 61.5%, tomato 62.5%, rgb(170, 66, 47) 64.0%, tomato 65.0%, rgb(170, 66, 47) 66.5%, tomato 68.0%, rgb(170, 66, 47) 69.0%, tomato 70.5%, rgb(170, 66, 47) 71.5%, tomato 73.0%, rgb(170, 66, 47) 74.0%, tomato 75.5%, rgb(170, 66, 47) 77.0%, tomato 78.5%, rgb(170, 66, 47) 
+	79.5%, tomato 80.5%, rgb(170, 66, 47) 81.5%, tomato 82.5%, rgb(170, 66, 47) 83.5%, tomato 84.5%, rgb(170, 66, 47) 85.5%, tomato 86.5%, rgb(170, 66, 47) 88.0%, tomato 89.5%, rgb(170, 66, 47) 91.0%, tomato 92.0%, rgb(170, 66, 47) 93.5%, tomato 94.5%, rgb(170, 66, 47) 96.0%, tomato 97.0%, rgb(170, 66, 47) 98.0%, tomato)
+}
+
+@keyframes left-curtain {
+	0%{right: 50%; left: 0;}
+	100%{right: 90%; left: -20%;}
+}
+
+@keyframes right-curtain {
+	0%{right: 0; left: 50%;}
+	100%{right: -20%; left: 90%;}
+}
+
+.aboutme-slides {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	animation: slides-fade-in 1s linear;
+}
+
+@keyframes slides-fade-in {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.aboutme-slides > div{
+	margin: 0;
+	width: 100%;
+	height: 500px;
+	background-color: white;
+}
+
+.aboutme-slides > div h1{
+	font-size: 45px;
+	text-align: center;
+	background-color: var(--beige);
+	margin: 0;
+	padding: 25px;
+}
+
+.aboutme-slides > div img{
+	display: block;
+	height: 100%;
+	margin: auto;
+}
+
+.aboutme-slides > div ul{
+	font-size: 22px;
+	margin: 50px;
+}
+
+.aboutme-slides > div ul li{
+	padding: 8px 0;
+}
+
+.keyboard-key, .space-key {
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 10%;
+	padding: 10px 15px;
+	margin: 15px;
+	background: linear-gradient(white, rgb(216, 216, 216));
+}
+
+.space-key {
+	padding: 10px 100px;
+	border-radius: 3% / 15%;
+}
+
+.aboutme-slides .thankyou-slide {
+	font-size: 50px;
+	text-align: center;
+	line-height: 500px;
+	background-color: var(--beige);
+}

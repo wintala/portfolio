@@ -1,0 +1,71 @@
+
+.oldtime-countdown-wrap {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	animation: fade-out 2s linear 6s forwards;
+}
+
+@keyframes fade-out {
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+.oldtime-countdown-wrap > div {
+	width: 50%;
+	height: 50%;
+	background-color: white;
+}
+
+.oldtime-countdown-wrap .oldtime-counter-wrap {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	top: clac(50% - 300px/2);
+	left: clac(50% - 300px/2);
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	border: 3px solid black;
+	text-align: center;
+	background-color: transparent;
+	box-sizing: border-box;
+}
+
+.oldtime-countdown-wrap .oldtime-counter-wrap .oldtime-counter{
+	border: 3px solid black;
+	width: 250px;
+	height: 250px;
+	font-size: 100px;
+	border-radius: 100%;
+	border: 3px solid black;
+	font-size: 200px;
+	line-height: 220px;
+	box-sizing: border-box;
+}
+
+.oldtime-countdown-wrap .horizontal-bar {
+	background-color: rgb(255, 248, 224);
+	position: absolute;
+	top: calc(50% - 6px/2);
+	left: 0;
+	right: 0;
+	height: 6px;
+	width: 100%;
+}
+
+.oldtime-countdown-wrap .vertical-bar {
+	background-color: rgb(255, 248, 224);
+	position: absolute;
+	left: calc(50% - 6px/2);
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 6px;
+}

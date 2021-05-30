@@ -37,7 +37,7 @@ const Skillmenu = () => {
 		EN: {
 			mainTitle: "Skills",
 			secondaryTitle: "Chooce a category",
-			arrowRight: "PORTFOLIO",
+			arrowRight: "ABOUT ME",
 			arrowLeft: "PROFILE",
 			menuDataAnalysis: "Data science",
 			menuProgramming: "Programming",
@@ -46,7 +46,7 @@ const Skillmenu = () => {
 		FI: {
 			mainTitle: "Taidot",
 			secondaryTitle: "Valitse kategoria",
-			arrowRight: "PORTFOLIO",
+			arrowRight: "MINUSTA",
 			arrowLeft: "PROFIILI",
 			menuDataAnalysis: "Data-analytiikka",
 			menuProgramming: "Ohjelmointi",
@@ -58,7 +58,7 @@ const Skillmenu = () => {
 		<div className="page-wrap">
 		<Banner 
 			mainTitle={langContent[lan].mainTitle} secondaryTitle={langContent[lan].secondaryTitle} 
-			leftArrow={{text:langContent[lan].arrowLeft, path: "./"}} rightArrow={{text:langContent[lan].arrowRight, path: "./portfolio"}}
+			leftArrow={{text:langContent[lan].arrowLeft, path: "./"}} rightArrow={{text:langContent[lan].arrowRight, path: "./minusta"}}
 		/>
 		<div className="skill-menu-wrap">
 			<div className="skill-menu-item" 

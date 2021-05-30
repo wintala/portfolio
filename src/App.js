@@ -8,6 +8,7 @@ import Analytics from "./componenets/data-analytiikka";
 import Footer from "./componenets/footer"
 import Info from "./componenets/info-page";
 import OtherSkills from "./componenets/other-skills";
+import AboutMe from "./componenets/aboutme";
 import Portfolio from "./componenets/portfolio";
 import Contact from "./componenets/contact-info";
 import { useEffect, createContext, useState, useRef } from "react"
@@ -52,12 +53,14 @@ const App = () => {
 		EN: {
 			navProfile: "profile",
       navSkills: "skills",
+      navAboutMe: "about me",
       navPortfolio: "portfolio",
       navContactInfo: "contact info"
 		},
 		FI: {
 			navProfile: "profiili",
       navSkills: "taidot",
+      navAboutMe: "minusta",
       navPortfolio: "portfolio",
       navContactInfo: "yhteystiedot"
 		},
@@ -68,12 +71,13 @@ const App = () => {
       <div className="nav">
         <Link to={"/" + window.location.search}>{langContent[language].navProfile}</Link>
         <Link to={"/taidot" + window.location.search}>{langContent[language].navSkills}</Link>
+        <Link to={"/minusta" + window.location.search}>{langContent[language].navAboutMe}</Link>
         <Link to={"/portfolio" + window.location.search}>{langContent[language].navPortfolio}</Link>
         <Link to={"/yhteystiedot" + window.location.search}>{langContent[language].navContactInfo}</Link>
         <div className="logo">CV Waltteri Rintala</div>
         <LanguageChanger changeLang={changeLang}/>
       </div>
-      {window.location.pathname === "/" && startAnimRunningRef.current ? <SquaresDrop /> : null}
+      {/* {window.location.pathname === "/" && startAnimRunningRef.current ? <SquaresDrop /> : null} */}
       <Switch>
         <Route path="/taidot/ohjelmointi">
           <Programming />
@@ -89,6 +93,9 @@ const App = () => {
         </Route>
         <Route path="/yhteystiedot">
           <Contact />
+        </Route>
+        <Route path="/minusta">
+          <AboutMe />
         </Route>
         <Route path="/portfolio">
           <Portfolio />
